@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Search Singer Artist</title>
+
+    <link rel="stylesheet" href="./artist.css" />
+    <script src="artist.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <div id="artist"></div>
+      <div id="top-tracks"></div>
+    </div>
+
+    <h1>Search Singer Artist</h1>
+    <select id="selectedArtist" onchange="fetchArtist()">
+      <option value=""></option>
+      <option value="Whitney Houston">Whitney Houston</option>
+      <option value="Michael Jackson">Michael Jackson</option>
+
+      <option value="Johnny Cash">Johnny Cash</option>
+      <option value="Loretta Lynn">Loretta Lynn</option>
+      <option value="Randy Travis">Randy Travis</option>
+
+      <option value="Lady Gaga">Lady Gaga</option>
+
+      <option value="Maria Callas">Maria Callas</option>
+      <option value="Luciano Pavarotti">Luciano Pavarotti</option>
+      <option value="Joan Sutherland">Joan Sutherland</option>
+
+      <!-- Un bel di vedremo (Madame Butterfly) -->
+      <option value="Renata Tebaldi">Renata Tebaldi</option>
+
+      <option value="Montserrat Caballe">Montserrat Caballé</option>
+      <option value="Renee Fleming">Renée Fleming</option>
+      <option value="Marilyn Horne">Marilyn Horne</option>
+    </select>
+  </body>
+</html>

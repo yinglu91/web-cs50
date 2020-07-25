@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Wesite</title>
+    <script>
+      m1 = 3;
+      alert(m1);
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('>>>>>test1');
+        document.querySelector('button').onclick = count;
+      }); // 100 buttons to add click event - use case?
+
+      let counter = 0;
+
+      function count() {
+        alert(m1);
+        console.log('>>>>>test2');
+        counter++;
+        document.querySelector('#counter').innerHTML = counter;
+
+        if (counter % 10 === 0) {
+          alert(`Counter is at ${counter}!`);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="counter">0</h1>
+    <button>Click Here!</button>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>async-await -- Fetch Joke</title>
+    <script>
+      async function fetchJoke() {
+        document.querySelector('#result').innerHTML = `Loading...`;
+
+        // Fetch the response
+        const response = await fetch(
+          'https://official-joke-api.appspot.com/random_joke'
+        );
+
+        // Get json data
+        const json = await response.json();
+        console.log(json);
+
+        showJoke(json);
+      }
+
+      function showJoke(joke) {
+        // console.log(joke);
+        // {"id":345,"type":"general","setup":"Why did the melons plan a big wedding?","punchline":"Because they cantaloupe!"}
+
+        document.querySelector('#result').innerHTML = `
+            <h1>setup: ${joke.setup}</h1>
+            <h1>Punchline: ${joke.punchline}</h1>
+        `;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="result"></div>
+    <br />
+    <button onclick="fetchJoke()">Fetch Joke</button>
+  </body>
+</html>

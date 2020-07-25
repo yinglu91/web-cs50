@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>setTimeout - counter</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(count, 1000);
+      });
+
+      let counter = 0;
+
+      function count() {
+        counter++;
+        document.querySelector('#counter').innerHTML = counter;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="counter">0</h1>
+  </body>
+</html>
